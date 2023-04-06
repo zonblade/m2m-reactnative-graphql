@@ -9,6 +9,8 @@ const GET_ITEM_LIST = gql`
       name
       category
       image
+      price
+      availability
     }
   }
 `;
@@ -48,6 +50,10 @@ export default function HomeSettings() {
                                     <View style={{flex:1, justifyContent:'center', display:'flex', flexDirection:'column', padding:10}}>
                                         <Text style={{fontSize:14}}>{item.name}</Text>
                                         <Text style={{fontSize:12}}>Category: {item.category}</Text>
+                                    </View>
+                                    <View style={{flex:1, justifyContent:'center', display:'flex', flexDirection:'column', padding:10}}>
+                                        <Text style={{fontSize:12}}>IDR. {item.price}</Text>
+                                        <Text style={{fontSize:12}}>Stock: {item.availability}</Text>
                                     </View>
                                 </View>
                             )
